@@ -1,9 +1,0 @@
-dSpeed = 2;
-hSpeed = 0;
-vSpeed = 0;
-objGravity = 0.60;
-jumpspeed_normal=7
-jumpspeed=jumpspeed_normal
-
-stealthPowerUpduration = 10 * room_speed; // Toda vez que eu fizer um power up e for definir a duração dele terei que botar o tempo vezes a room_speed
-stealthPowerActive = false;
