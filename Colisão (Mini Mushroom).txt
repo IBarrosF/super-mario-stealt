@@ -1,6 +1,0 @@
-with(omario){
-
-sprite_index= omario_upM;
-instance_destroy(oMiniMushroom);
-alarm [0]=15;
-}
