@@ -1,0 +1,8 @@
+with(omario){
+
+sprite_index= omario_upL;
+stealthPowerActive = true;
+alarm [1]= stealthPowerUpduration;
+
+}
+instance_destroy(oSuperLeaf);

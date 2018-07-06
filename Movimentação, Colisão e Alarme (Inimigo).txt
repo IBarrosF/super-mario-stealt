@@ -1,0 +1,57 @@
+/// @description Moving,Collision and Alarm
+// Moving the Player and Colliding with Walls
+hSpeed= dir * mvSpeed;
+vSpeed+= objGravity;
+
+// Horizontal Collision
+
+if (place_meeting(x+hSpeed,y, oWall))
+{
+	 while(!place_meeting(x+sign(hSpeed),y,oWall))
+	 {
+		x=x+sign(hSpeed);
+	 }
+	 hSpeed=0;
+	 dir *= -1;
+
+}
+x=x+hSpeed;
+
+// Vertical Collision
+
+if(place_meeting(x,y+vSpeed, oWall))
+{
+	while(!place_meeting(x,y+sign(vSpeed),oWall))
+	{
+		y=y+sign(vSpeed);
+	}
+	vSpeed=0;
+}
+y=y+vSpeed;
+
+
+// Enemy  Collision
+if (place_meeting(x, y, omario) && omario.sprite_index != omario_upL)
+{
+	if (omario.y < y-16)
+	{
+		with (omario) {
+			vSpeed = -jumpspeed
+		}
+		instance_destroy();
+	}
+	else
+	{
+		if (omario.sprite_index == omario_upM) {
+			omario.sprite_index = pmario;
+		} else {
+			game_restart();
+		}
+	}
+}
+
+// Código de visão/alerta
+if (!omario.stealthPowerActive) {
+	// Código de alarme
+}
+

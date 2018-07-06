@@ -1,0 +1,11 @@
+/// @description Power Up Mushroom
+sprite_index= omario_upM;
+
+
+
+/// @description Power Up Leaf
+
+sprite_index = pmario;
+stealthPowerActive = false;
+
+
